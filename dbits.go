@@ -24,7 +24,7 @@ func DoubleBits(n float64) [2]uint32 {
 	return [2]uint32{a, b}
 }
 
-//pack low and higher uints of float as float 
+// Pack low and higher uints of float as float
 func Pack(lo uint32, hi uint32) float64 {
 	var buf bytes.Buffer
 	var f float64
