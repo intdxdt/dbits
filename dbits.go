@@ -59,8 +59,11 @@ func Hi(n float64) uint32 {
 	if err := binary.Write(&buf, binary.LittleEndian, n); err != nil {
 		panic(err)
 	}
-	binary.Read(&buf, binary.LittleEndian, &a)
-	if err := binary.Read(&buf, binary.LittleEndian, &b); err != nil {
+	err := binary.Read(&buf, binary.LittleEndian, &a)
+	if err != nil {
+		panic(err)
+	}
+	if err = binary.Read(&buf, binary.LittleEndian, &b); err != nil {
 		panic(err)
 	}
 	return b

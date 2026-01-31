@@ -1,9 +1,10 @@
 package dbits
 
 import (
-	"github.com/franela/goblin"
 	"math"
 	"testing"
+
+	"github.com/franela/goblin"
 )
 
 func TestDoubleBits(t *testing.T) {
